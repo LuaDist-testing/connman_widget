@@ -51,11 +51,15 @@ manually though (see the `rockspec` file for more information).
 
 # Configuration
 
-The widget displays network icons that are searched in the folder defined
-by `beautiful.connman_icon_theme_dir` with extension
-`beautiful.connman_icon_extension`.
-The default is to look into `"/usr/share/icons/Adwaita/scalable"` for
-icons whose extension is `".svg"`.
+The widget displays network icons that are searched in the folders defined
+in the table `beautiful.connman_icon_theme_dirs` with extensions defined
+in the table `beautiful.connman_icon_extensions`.
+The default is to look into `"/usr/share/icons/Adwaita/scalable/devices/"`
+and  `"/usr/share/icons/Adwaita/scalable/status/"`for
+icons whose extension is `"svg"`. Note that the directory paths *must* end
+with a slash and that the extensions *must not* contain a dot.
+The icons are searched using Awesome's
+[`awful.util.geticonpath` function](https://awesomewm.org/doc/api/modules/awful.util.html#geticonpath).
 
 Depending on your network devices, you may need some or all of the icons
 whose name starts with `network-`.
@@ -84,12 +88,18 @@ Add the following to your `~/.config/awesome/rc.lua`:
 
 Require the module:
 
-    -- require *after* `beautiful.init` or the theme will be inconsistent!
-    local connman = require("connman_widget")
+```lua
+-- require *after* `beautiful.init` or the theme will be inconsistent!
+local connman = require("connman_widget")
+-- override the GUI client.
+connman.gui_client = "wicd"
+```
 
 Add the widget to your layout:
 
-    right_layout:add(connman)
+```lua
+right_layout:add(connman)
+```
 
 # Limitations
 
