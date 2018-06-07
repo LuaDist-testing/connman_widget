@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "connman_widget"
-version = "0.2.0-1"
+version = "0.2.0-2"
 -- LuaDist source
 source = {
-  tag = "0.2.0-1",
+  tag = "0.2.0-2",
   url = "git://github.com/LuaDist-testing/connman_widget.git"
 }
 -- Original source
@@ -25,7 +25,7 @@ supported_platforms = {
 }
 dependencies = {
    "lua >= 5.1",
-   "connman_dbus >= 0.3.0, < 0.4"
+   "connman_dbus >= 0.3.0, < 0.5"
 }
 build = {
    type = "builtin",
