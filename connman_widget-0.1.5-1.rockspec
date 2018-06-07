@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "connman_widget"
-version = "0.1.4-1"
+version = "0.1.5-1"
+-- LuaDist source
 source = {
-   url = "git://github.com/stefano-m/awesome-connman_widget",
-   tag = "v0.1.4"
+  tag = "0.1.5-1",
+  url = "git://github.com/LuaDist-testing/connman_widget.git"
 }
+-- Original source
+-- source = {
+--    url = "git://github.com/stefano-m/awesome-connman_widget",
+--    tag = "v0.1.5"
+-- }
 description = {
    summary = "A Connman widget for the Awesome Window Manager",
    detailed = [[
