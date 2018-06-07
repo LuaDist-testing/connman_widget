@@ -1,8 +1,8 @@
 package = "connman_widget"
-version = "0.1.3-1"
+version = "devel-1"
 source = {
   url = "git://github.com/stefano-m/awesome-connman_widget",
-  tag = "v0.1.3"
+  tag = "master"
 }
 description = {
   summary = "A Connman widget for the Awesome Window Manager",
@@ -14,7 +14,7 @@ description = {
 }
 dependencies = {
   "lua >= 5.1",
-  "connman_dbus >= 0.1.0, < 0.2",
+  "connman_dbus",
 }
 supported_platforms = { "linux" }
 build = {
